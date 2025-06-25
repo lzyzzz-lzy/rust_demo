@@ -46,7 +46,8 @@ pub async fn send_chat_request(messages: Vec<Message>) -> Result<String, Box<dyn
     let client = ClientBuilder::new()
         .timeout(Duration::from_secs(TIMEOUT_SECS))
         .build()?;
-    let api_key = env::var("ERNIE_API_KEY").expect("ERNIE_API_KEY must be set");
+    // let api_key = env::var("ERNIE_API_KEY").expect("ERNIE_API_KEY must be set");
+    let api_key = "bce-v3/ALTAK-Wk3XBWa75x1cjYHkDrcHn/13e33a22e2b698831729d17dfd5370261ae227b7";
 
     let request = ChatRequest {
         model: "ernie-3.5-8k".to_string(),
